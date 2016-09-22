@@ -252,7 +252,7 @@
             <div class="span3 pull-left left-menu" style="background-color: #f9f9f9; margin-bottom:25px;">
               <ul class="nav nav-list">
                 <li class="nav-buttons btn"><a data-id="index" id="nav_index" href="index.php">Начало</a></li>
-                <li class="nav-buttons btn"><a data-id="index" id="nav_index" href="index.php">Домашни</a></li>
+                <li class="nav-buttons btn"><a data-id="homeworks" id="nav_index" href="homeworks.php">Домашни</a></li>
                 <li class="nav-buttons btn"><a data-id="index" id="nav_index" href="index.php">Е - бележник</a></li>
                 <li class="nav-buttons btn"><a data-id="schedule" id="nav_index" href="schedule.php">Програма</a></li>
                 <li class="nav-buttons btn"><a data-id="index" id="nav_index" href="index.php">Класация</a></li>
