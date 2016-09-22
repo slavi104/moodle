@@ -46,15 +46,15 @@
         <div class="span3 pull-left left-menu" style="background-color: #f9f9f9; margin-bottom:25px;">
             <ul class="nav nav-list">
                 <li class="nav-buttons btn"><a data-id="index" id="nav_index" href="index.php">Начало</a></li>
-                <li class="nav-buttons btn"><a data-id="homeworks" id="nav_index" href="homeworks.php">Домашни</a></li>
-                <li class="nav-buttons btn"><a data-id="studentbook" id="nav_index" href="studentbook.php">Е - бележник</a></li>
                 <li class="nav-buttons btn"><a data-id="schedule" id="nav_index" href="schedule.php">Програма</a></li>
-                <li class="nav-buttons btn"><a data-id="index" id="nav_index" href="index.php">Класация</a></li>
-                <li class="nav-buttons btn"><a data-id="calendar" id="nav_index" href="calendar.php">Ваканции</a></li>
-                <li class="nav-buttons btn"><a data-id="index" id="nav_index" href="index.php">Учебен план</a></li>
-                <li class="nav-buttons btn"><a data-id="gallery" id="nav_index" href="gallery.php">Галерия</a></li>
                 <li class="nav-buttons btn"><a data-id="students" id="nav_contacts" href="students.php">Ученици</a></li>
                 <li class="nav-buttons btn"><a data-id="teachers" id="nav_contacts" href="teachers.php">Преподаватели</a></li>
+                <li class="nav-buttons btn"><a data-id="homeworks" id="nav_index" href="homeworks.php">Домашни</a></li>
+                <li class="nav-buttons btn"><a data-id="studentbook" id="nav_index" href="studentbook.php">Е - бележник</a></li>
+                <li class="nav-buttons btn"><a data-id="index" id="nav_index" href="index.php">Класация</a></li>
+                <li class="nav-buttons btn"><a data-id="index" id="nav_index" href="index.php">Учебен план</a></li>
+                <li class="nav-buttons btn"><a data-id="calendar" id="nav_index" href="calendar.php">Ваканции</a></li>
+                <li class="nav-buttons btn"><a data-id="gallery" id="nav_index" href="gallery.php">Галерия</a></li>
                 <li class="nav-buttons btn"><a data-id="contacts" id="nav_contacts" href="contacts.php">Контакти</a></li>
             </ul>
         </div>

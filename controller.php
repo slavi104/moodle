@@ -69,21 +69,21 @@ class Functions {
     public static function printItems($folder){
         $folder .= '/';
         $html    = '';
-        $html .= '<div class="row-fluid">';
         foreach (scandir($folder) as $key => $value) {
             if ($value != '.' && $value != '..') {
-                if (strstr($value, 'jpg')) {
+                if (strstr($value, 'jpg') || strstr($value, 'png') || strstr($value, 'JPG') || strstr($value, 'PNG')) {
+                    $html .= '<div class="row-fluid item">';
                     $html .= '    <div class="span5">';
                     $html .= '        <img class="item_image" src="' . $folder . $value . '" />';
                     $html .= '    </div>';
-                } else { 
+                    $value = str_replace(array('jpg', 'png', 'JPG', 'PNG'), 'html', $value);
                     $html .= '    <div class="span7">';
                     $html .=          file_get_contents($folder . $value); 
                     $html .= '    </div>';
+                    $html .= '</div>';
                 } 
             } 
         }
-        $html .= '</div>';
 
         return $html;
     }
