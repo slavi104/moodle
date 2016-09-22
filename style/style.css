@@ -1,5 +1,5 @@
 :root {
-    --color-primary-0: #FFAF01;
+    --color-primary-0: #9399ee;
     --color-primary-1: #FFCE64;
     --color-primary-2: #FFC13A;
     --color-primary-3: #C68800;
@@ -35,9 +35,10 @@ body, header, h1, h2, h3, footer, section, article, nav, ul, ol, table, div, p, 
 body {
 	color: #FFD701;
 	background: #FFE764;
-	background-image: url("../images/Classroom-Decoration_F.png");
-	background-size: 100% 100%;
-	opacity: 0.9;
+	background-image: url(../images/4.jpg);
+	opacity: 0.95;
+    background-repeat: inherit;
+    background-size: 100%;
 }
 
 body.middle {
@@ -69,6 +70,11 @@ header
 {
 	margin: auto;
 	width: 100%;
+	background-image: url("../images/P9200115.jpg");
+	height: 200px;
+    background-size: 100%;
+    margin-bottom: 5px;
+    border: 5px solid var(--color-primary-0);
 }
 #logo
 {
@@ -76,6 +82,10 @@ header
 	background-image: url("../images/alumni.png");
 	background-repeat: no-repeat;
 	margin-bottom: 0px;*/
+}
+
+.nav-list{
+	background-color: var(--color-primary-0);
 }
 
 nav#menu li
@@ -535,7 +545,6 @@ input#userName-input {
 }
 
 #search_container input[type=search] {
-	width: 242%;
 	margin: 0;
 	padding: 0;
 	padding-left: 14px;
@@ -547,6 +556,13 @@ input#userName-input {
 	border: none;
 	line-height: 14px;
 	outline: 0;
+}
+
+.welcome_message {
+	font-size: 15px !important;
+    font-family: cursive;
+    font-style: oblique;
+    font-weight: bold !important;
 }
 .big-container {
 	width: 89% !important;
@@ -586,7 +602,7 @@ nav#menu>ul>li>a:hover {
 	margin-left: 0px !important;
 }
 
-@media (min-width: 980px) and (max-width: 1200px) {
+/*@media (min-width: 980px) and (max-width: 1200px) {
 	.span4.pull-left.left-menu {
 		margin-top: 80px;
 	}
@@ -600,7 +616,6 @@ nav#menu>ul>li>a:hover {
 @media (min-width: 1200px){
 	body {
 		background-color: #fff;
-		/*background-image:url("../images/background-fullhd.png");*/
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		text-align: left;
@@ -609,11 +624,10 @@ nav#menu>ul>li>a:hover {
 	}
 
 	body.middle {
-		/*margin-left: 5%;*/
 		padding-left: 5%;
 	}
 }
-
+*/
 h2.h2-contact {
 	text-align: left;
 	color: #017391 !important;

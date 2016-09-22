@@ -2,6 +2,8 @@
 
 require_once 'config.php';
 //fORMDatabase::attach(new fDatabase('mysql', 'ihriulr4_games_for_brains', 'ihriulr4', 'xYY!5eu5s:FQ'));
+error_reporting(E_ERROR | E_PARSE);
+session_start(); 
 
 fORMDatabase::attach(new fDatabase('mysql', DB_NAME, DB_USER, DB_PASS));
 
@@ -15,7 +17,6 @@ class Schedule extends fActiveRecord{
 
 
 }
-
 
 class Functions {
 

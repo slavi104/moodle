@@ -4,3 +4,4 @@ include 'libs/flourishlib-flourish-classes-0.9.0-0-geb2d48b/flourish/fException.
 define("DB_NAME", 'my_class' );
 define("DB_USER", 'root');
 define("DB_PASS", '');
+define("ROOT", "/my_class/");
