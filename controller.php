@@ -64,7 +64,31 @@ class Functions {
             echo $e->printMessage();
         }
         return $user;
+    }    
+
+    public static function printItems($folder){
+        $folder .= '/';
+        $html    = '';
+        $html .= '<div class="row-fluid">';
+        foreach (scandir($folder) as $key => $value) {
+            if ($value != '.' && $value != '..') {
+                if (strstr($value, 'jpg')) {
+                    $html .= '    <div class="span5">';
+                    $html .= '        <img class="item_image" src="' . $folder . $value . '" />';
+                    $html .= '    </div>';
+                } else { 
+                    $html .= '    <div class="span7">';
+                    $html .=          file_get_contents($folder . $value); 
+                    $html .= '    </div>';
+                } 
+            } 
+        }
+        $html .= '</div>';
+
+        return $html;
     }
+
+
 }
 
 ?>

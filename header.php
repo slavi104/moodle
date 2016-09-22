@@ -53,6 +53,8 @@
                 <li class="nav-buttons btn"><a data-id="calendar" id="nav_index" href="calendar.php">Ваканции</a></li>
                 <li class="nav-buttons btn"><a data-id="index" id="nav_index" href="index.php">Учебен план</a></li>
                 <li class="nav-buttons btn"><a data-id="gallery" id="nav_index" href="gallery.php">Галерия</a></li>
+                <li class="nav-buttons btn"><a data-id="students" id="nav_contacts" href="students.php">Ученици</a></li>
+                <li class="nav-buttons btn"><a data-id="teachers" id="nav_contacts" href="teachers.php">Преподаватели</a></li>
                 <li class="nav-buttons btn"><a data-id="contacts" id="nav_contacts" href="contacts.php">Контакти</a></li>
             </ul>
         </div>
