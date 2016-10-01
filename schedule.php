@@ -2,6 +2,7 @@
     require_once 'header.php';
 ?>
 <div id="content">
+<h3 style="text-align: center;">Програма за I срок</h3>
 <table class="schedule_table" border="1" cellpadding="10" cellspacing="3" >
   <thead>
     <tr>

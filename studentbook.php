@@ -38,15 +38,15 @@ if(fSession::get('name')) { ?>
             </span>
         </form>
     </div>
-    <h3 style="text-align: center;">E-бележник</h3>
+    <h3 style="text-align: center;">E-бележник на <?php echo Functions::fetchOriginalName(fSession::get('name')); ?></h3>
     <table class="schedule_table" style="width: 100%;" border="1" cellpadding="10" cellspacing="3" >
       <thead>
         <tr>
           <th>Предмет</th>
-          <th>Октомври</th>
-          <th>Ноември</th>
-          <th>Декември</th>
-          <th>Януари</th>
+          <th>I оценка</th>
+          <th>II оценка</th>
+          <th>III оценка</th>
+          <th>IV оценка</th>
         </tr>
       </thead>
       <tbody>
@@ -66,12 +66,16 @@ if(fSession::get('name')) { ?>
                 $grades_array = explode(',', $grades);
             }
         }
+        $grades_count = count($grades_array);
+        for ($i=0; $i < 4 - $grades_count; $i++) { 
+            $grades_array[] = '-';
+        }
 
     ?>
       <tr>
-        <td width="35%" style="padding: 5px;"><?php print_r($class_name); ?></td>
-        <?php foreach ($grades_array as $grade) {?>
-            <td style="padding: 5px;"><?php echo $grade; ?></td>
+        <td width="35%" style="padding: 5px;"><?php echo $class_name; ?></td>
+        <?php foreach ($grades_array as $grade) { ?>
+            <td style="padding: 5px;"><?php echo Functions::gradeWithWords($grade); ?></td>
         <?php }?>
       </tr>
     <?php }
