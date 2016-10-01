@@ -5,7 +5,8 @@
 <?php 
 foreach (scandir('images/gallery/') as $key => $value) {
   if ($value != '.' && $value != '..') {
-    echo '<img src="images/gallery/' . $value . '" class="gallery_images">';
+    $folder_name = file_get_contents('images/gallery/' . $value . '/name.txt');
+    echo '<a href="" style="cursor:pointer;" class="span3"><img style="width:90%" src="images/folder1.png" class="gallery_images"/><h4 style="text-align:center;">' . $folder_name . '</h4></a>';
   }
 }
 ?>

@@ -40,11 +40,11 @@ require_once 'header.php';
     }
     krsort($students_chart_ordered);
     arsort($students_chart_ordered);
-    $possition = 1;
+    $possition = 0;
     $last_student_grade = null;
     foreach ($students_chart_ordered as $student_name => $avg_grade) {
-        $possition = $last_student_grade > $avg_grade ? ++$possition : $possition;
-        $last_student_grade = $avg_grade;
+        $possition = $last_student_grade != Functions::gradeWithWords($avg_grade) ? ++$possition : $possition;
+        $last_student_grade = Functions::gradeWithWords($avg_grade);
     ?>
       <tr class="chart_possition_<?php echo $possition; ?>">
         <td style="padding: 5px;"><?php echo $possition; ?></td>

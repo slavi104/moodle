@@ -91,19 +91,19 @@ class Functions {
     public static function gradeWithWords($grade){
         switch (true) {
             case $grade >= 2 && $grade < 3:
-                $grade = "Слаб (" . $grade . ")";
+                $grade = "Слаб";
                 break;
             case $grade > 3 && $grade < 3.5:
-                $grade = "Среден (" . $grade . ")";
+                $grade = "Задаволителен";
                 break;
             case $grade >= 3.5 && $grade < 4.5:
-                $grade = "Добър (" . $grade . ")";
+                $grade = "Добър";
                 break;
             case $grade >= 4.5 && $grade < 5.5:
-                $grade = "Много добър (" . $grade . ")";
+                $grade = "Много добър";
                 break;
             case $grade >= 5.5:
-                $grade = "Отличен (" . $grade . ")";
+                $grade = "Отличен";
                 break;
             default:
                 $grade = $grade;
