@@ -920,3 +920,14 @@ table>tbody>tr>td {
  .item {
  	margin-bottom: 20px; 
  }
+
+.chart_possition_1 {
+	background-color: #f8f2c4;
+}
+.chart_possition_2 {
+	background-color: #e6ebee;
+
+}
+.chart_possition_3 {
+	background-color: #f8e9df;
+}

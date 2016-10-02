@@ -50,8 +50,8 @@
                 <li class="nav-buttons btn"><a data-id="students" id="nav_contacts" href="students.php">Ученици</a></li>
                 <li class="nav-buttons btn"><a data-id="teachers" id="nav_contacts" href="teachers.php">Преподаватели</a></li>
                 <li class="nav-buttons btn"><a data-id="homeworks" id="nav_index" href="homeworks.php">Домашни</a></li>
-                <li class="nav-buttons btn"><a data-id="studentbook" id="nav_index" href="studentbook.php">Е - бележник</a></li>
-                <li class="nav-buttons btn"><a data-id="index" id="nav_index" href="index.php">Класация</a></li>
+                <li class="nav-buttons btn"><a data-id="studentbook" id="nav_studentbook" href="studentbook.php">Е - бележник</a></li>
+                <li class="nav-buttons btn"><a data-id="chart" id="nav_chart" href="chart.php">Класация</a></li>
                 <li class="nav-buttons btn"><a data-id="index" id="nav_index" href="index.php">Учебен план</a></li>
                 <li class="nav-buttons btn"><a data-id="calendar" id="nav_index" href="calendar.php">Ваканции</a></li>
                 <li class="nav-buttons btn"><a data-id="gallery" id="nav_index" href="gallery.php">Галерия</a></li>

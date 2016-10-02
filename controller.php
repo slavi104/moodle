@@ -67,7 +67,7 @@ class Functions {
     }    
 
     public static function printItems($folder){
-        $folder .= '/';
+        $folder  = 'data/' . $folder . '/';
         $html    = '';
         foreach (scandir($folder) as $key => $value) {
             if ($value != '.' && $value != '..') {
@@ -86,6 +86,42 @@ class Functions {
         }
 
         return $html;
+    }
+
+    public static function gradeWithWords($grade){
+        switch (true) {
+            case $grade >= 2 && $grade < 3:
+                $grade = "Слаб";
+                break;
+            case $grade > 3 && $grade < 3.5:
+                $grade = "Задаволителен";
+                break;
+            case $grade >= 3.5 && $grade < 4.5:
+                $grade = "Добър";
+                break;
+            case $grade >= 4.5 && $grade < 5.5:
+                $grade = "Много добър";
+                break;
+            case $grade >= 5.5:
+                $grade = "Отличен";
+                break;
+            default:
+                $grade = $grade;
+                break;
+        }
+
+        return $grade;
+    }
+
+    public static function fetchOriginalName($name){
+        $names_data = explode(';',file_get_contents('data/names.txt'));
+        foreach ($names_data as $data) {
+            list($user_name, $orig_name) = explode('-', trim($data));
+            if ($user_name == $name) {
+                $name = $orig_name;
+            }
+        }
+        return $name;
     }
 
 
