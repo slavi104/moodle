@@ -35,7 +35,7 @@
                         </div>
                     </li>
                     <li class="pull-left nav-buttons btn welcome_message">
-                        Добре дошли в сайта на 1Б клас на XII ОУ "Св. св. Кирил и Методий"
+                        Добре дошли в сайта на 1Б клас на XIII ОУ "Св. св. Кирил и Методий"
                     </li>
                 </ul>
             </nav>
