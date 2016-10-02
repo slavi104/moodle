@@ -72,7 +72,7 @@ class Functions {
         foreach (scandir($folder) as $key => $value) {
             if ($value != '.' && $value != '..') {
                 if (strstr($value, 'jpg') || strstr($value, 'png') || strstr($value, 'JPG') || strstr($value, 'PNG')) {
-                    $html .= '<div class="row-fluid item">';
+                    $html .= '<div class="row-fluid item" style="border-bottom: 2px dashed #9399ee; padding-bottom: 20px;">';
                     $html .= '    <div class="span5">';
                     $html .= '        <img class="item_image" src="' . $folder . $value . '" />';
                     $html .= '    </div>';
@@ -117,7 +117,7 @@ class Functions {
         $names_data = explode(';',file_get_contents('data/names.txt'));
         foreach ($names_data as $data) {
             list($user_name, $orig_name) = explode('-', trim($data));
-            if ($user_name == $name) {
+            if (ltrim(utf8_decode($user_name), '?') == utf8_decode($name)) {
                 $name = $orig_name;
             }
         }

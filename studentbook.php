@@ -38,7 +38,7 @@ if(fSession::get('name')) { ?>
             </span>
         </form>
     </div>
-    <h3 style="text-align: center;">E-бележник на <?php echo Functions::fetchOriginalName(fSession::get('name')); ?></h3>
+    <h3 style="text-align: center;">E-бележник на <?php echo Functions::fetchOriginalName(fSession::get('name')); ?></h3><br><br>
     <table class="schedule_table" style="width: 100%;" border="1" cellpadding="10" cellspacing="3" >
       <thead>
         <tr>

@@ -26,6 +26,12 @@ body, header, h1, h2, h3, footer, section, article, nav, ul, ol, table, div, p, 
 	padding: 0px;
 	margin: 0px;
 }
+
+#content h1, #content h2, #content h3 {
+	margin-top: 0px !important; 
+	margin-bottom: 0px !important; 
+}
+
 #wrapper1
 {
 	
@@ -889,7 +895,7 @@ a:hover {
  }
 
  .gallery_images{
- 	width: 252px;
+ 	width: 232px;
     border: 3px solid var(--color-primary-0);
     margin: 10px;
     border-radius: 5px;
@@ -904,7 +910,7 @@ table>tbody>tr>td {
 }
 
 .calendar_png{
-	width: 820px;
+	width: 100%;
 }
 
 .schedule_table{
@@ -930,4 +936,13 @@ table>tbody>tr>td {
 }
 .chart_possition_3 {
 	background-color: #f8e9df;
+}
+
+.students img {
+	border-radius: 40%;
+}
+
+#content {
+	text-align: justify;
+    text-justify: inter-word;
 }
