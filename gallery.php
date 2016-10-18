@@ -17,10 +17,10 @@ if ($_GET['album']) {
     } 
   }
   if ($page > 1) {
-    echo '<br><a class="pull-left" href="gallery.php?album=' . $album . '&page=' . ($page - 1) . '"><<< Предишна страница</a>';
+    echo '<br><a class="pull-left next-previous-page" href="gallery.php?album=' . $album . '&page=' . ($page - 1) . '"><<< Предишна страница</a>';
   }
   if (($page * 6) < count($files) - 3) {
-    echo '<a class="pull-right" href="gallery.php?album=' . $album . '&page=' . ($page + 1) . '">Следваща страница >>></a>';
+    echo '<a class="pull-right next-previous-page" href="gallery.php?album=' . $album . '&page=' . ($page + 1) . '">Следваща страница >>></a>';
   }
 
 } else {

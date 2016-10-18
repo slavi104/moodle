@@ -2,7 +2,7 @@
     require_once 'header.php';
 ?>
 <div id="content">
-<h3 style="text-align: center;">Програма за I срок</h3>
+<h3 style="text-align: center;">Програма за I срок</h3><br>
 <table class="schedule_table" border="1" cellpadding="10" cellspacing="3" >
   <thead>
     <tr>
@@ -19,7 +19,7 @@
 $classes = fRecordSet::buildFromSQL('Schedule', 'SELECT schedules.* FROM schedules');
 foreach ($classes as $class) { ?>
   <tr>
-    <td width="12%" style="padding: 5px;"><?php echo $class->getDuration(); ?></td>
+    <td width="14%" style="padding: 5px;"><?php echo $class->getDuration(); ?></td>
     <td width="17.5%" style="padding: 5px;"><?php echo $class->getMonday(); ?></td>
     <td width="17.5%" style="padding: 5px;"><?php echo $class->getTuesday(); ?></td>
     <td width="17.5%" style="padding: 5px;"><?php echo $class->getWednesday(); ?></td>
@@ -30,6 +30,11 @@ foreach ($classes as $class) { ?>
 ?>
   </tbody>
 </table>
+<br>
+<span><u><b>Забележка:</b></u><br>
+От 14:35ч. до 15:45ч. в Понеделник - Хореография.<br>
+От 12:20ч. до 12:50ч. в Сряда - Плуване.
+</span>
 </div>
 <script type="text/javascript">
 $(document).ready(function() {

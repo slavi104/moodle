@@ -1,12 +1,11 @@
 <?php
 
 require_once 'config.php';
-//fORMDatabase::attach(new fDatabase('mysql', 'ihriulr4_games_for_brains', 'ihriulr4', 'xYY!5eu5s:FQ'));
 error_reporting(E_ERROR | E_PARSE);
 session_start(); 
-
-fORMDatabase::attach(new fDatabase('mysql', DB_NAME, DB_USER, DB_PASS));
-
+$DB = new fDatabase('mysql', DB_NAME, DB_USER, DB_PASS);
+fORMDatabase::attach($DB);
+define('DB', $DB);
 
 class User extends fActiveRecord{
 
@@ -66,22 +65,37 @@ class Functions {
         return $user;
     }    
 
-    public static function printItems($folder){
+    public static function printItems($folder, $only_html = false){
+        if ($folder == 'students' || $folder == 'teachers') {
+            $first_span = '4';
+            $second_span = '8';
+        } else {
+            $first_span = '2';
+            $second_span = '10';
+        }
         $folder  = 'data/' . $folder . '/';
         $html    = '';
         foreach (scandir($folder) as $key => $value) {
             if ($value != '.' && $value != '..') {
                 if (strstr($value, 'jpg') || strstr($value, 'png') || strstr($value, 'JPG') || strstr($value, 'PNG')) {
                     $html .= '<div class="row-fluid item" style="border-bottom: 2px dashed #9399ee; padding-bottom: 20px;">';
-                    $html .= '    <div class="span5">';
+                    $html .= '    <div class="span' . $first_span . '">';
                     $html .= '        <img class="item_image" src="' . $folder . $value . '" />';
                     $html .= '    </div>';
                     $value = str_replace(array('jpg', 'png', 'JPG', 'PNG'), 'html', $value);
-                    $html .= '    <div class="span7">';
+                    $html .= '    <div class="span' . $second_span . '">';
                     $html .=          file_get_contents($folder . $value); 
                     $html .= '    </div>';
                     $html .= '</div>';
-                } 
+                }
+
+                if ($only_html && strstr($value, 'html')) {
+                    $html .= '<div class="row-fluid item" style="border-bottom: 2px dashed #9399ee; padding-bottom: 20px;">';
+                    $html .= '    <div class="span12">';
+                    $html .=          file_get_contents($folder . $value); 
+                    $html .= '    </div>';
+                    $html .= '</div>';
+                }
             } 
         }
 
@@ -93,7 +107,7 @@ class Functions {
             case $grade >= 2 && $grade < 3:
                 $grade = "Слаб";
                 break;
-            case $grade > 3 && $grade < 3.5:
+            case $grade >= 3 && $grade < 3.5:
                 $grade = "Задаволителен";
                 break;
             case $grade >= 3.5 && $grade < 4.5:

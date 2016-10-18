@@ -13,9 +13,33 @@ if ($_POST) {
         $students_data = explode(';', $credentials);
         foreach ($students_data as $data) {
             list($orig_name, $orig_pass) = explode(',', trim($data));
+            /*var_dump($orig_name);
+            var_dump($orig_pass);*/
             if ($name === $orig_name && $pass === $orig_pass) {
                 fSession::open();
                 fSession::set('name', $name);
+                $ip = $_SERVER['REMOTE_ADDR'];
+
+                if ($ip == '93.123.15.218' && $name != 'tovaneenikoi') {
+                	# code...
+                } else {
+	                try {
+	               		$DB = new fDatabase('mysql', DB_NAME, DB_USER, DB_PASS);
+	                	$statement = $DB->prepare("INSERT INTO users (name, ip) VALUES (%s, %s)");
+						$DB->query($statement, $name, $ip);
+	                } catch (Exception $e) {
+	                	try {
+	                		$now = new fTimestamp();
+	                		$now = $now->adjust('+1 hour');
+	                		$DB->execute("UPDATE users SET ip = %s, last_login = %s WHERE name = %s", $ip, $now->format('Y-m-d H:i:s') , $name);
+							//$DB->query($statement, $name);
+	                	} catch (Exception $e) {
+	                		
+	                	}
+	                }
+                }
+
+
             }
         }
         if (!fSession::get('name')) {
@@ -99,7 +123,8 @@ if(fSession::get('name')) { ?>
                 <input type="submit" value="Вход">
             </span>
         </form>
-</div>
+        <img style="width:100%" src="/images/belejnik.jpg">
+	</div>
 <?php } ?>
 </div>
 <?php

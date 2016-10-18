@@ -2,7 +2,7 @@
 require_once 'header.php';
 ?>
 <div id="content">
-    <h3 style="text-align: center;">Класация на учениците по всички предмети</h3>
+    <h3 style="text-align: center;">Класация на учениците по всички предмети</h3><br>
     <table class="schedule_table" style="width: 100%;" border="1" cellpadding="10" cellspacing="3" >
       <thead>
         <tr>

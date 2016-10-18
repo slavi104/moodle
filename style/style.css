@@ -37,6 +37,14 @@ body, header, h1, h2, h3, footer, section, article, nav, ul, ol, table, div, p, 
 	
 }
 
+iframe {
+	width: 100% !important;
+}
+
+.presentations embed {
+	width: 760px !important;
+}
+
 
 body {
 	color: #FFD701;
@@ -265,6 +273,7 @@ aside
 	background-color: #f9f9f9;
 	min-height: 522px;
 	margin-bottom: 20px;
+	padding-bottom: 45px;
 }
 .hidden
 {
@@ -945,4 +954,13 @@ table>tbody>tr>td {
 #content {
 	text-align: justify;
     text-justify: inter-word;
+}
+
+.next-previous-page {
+	background: #f0f0f0;
+    border: 2px solid;
+    position: inherit;
+    padding: 5px;
+    font-weight: bold;
+    color: var(--color-secondary-2-0);
 }
